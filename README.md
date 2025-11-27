@@ -134,7 +134,7 @@ If you find this work useful, please cite our paper:
 ```bibtex
 @inproceedings{chen2026vip3de,
   title={Fast Multi-view Consistent 3D Editing with Video Priors},
-  author={Chen, Liyi and others},
+  author={Chen, Liyi and Li, Ruihuang and Zhang, Guowen and Wang, Pengfei and Zhang, Lei},
   booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
   year={2026}
 }
