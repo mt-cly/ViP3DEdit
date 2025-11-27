@@ -1,0 +1,100 @@
+name: "vip3de"
+tag: "${rmspace:${system.prompt_processor.prompt},_}"
+exp_root_dir: "outputs"
+seed: 0
+ 
+data_type: "gs-load"
+data:
+  batch_size: 1
+  source: data/face_smooth
+  max_view_num: 63 # 20
+  eval_camera_distance: 4.0
+  camera_distance_range: [1.5, 4.0]
+  light_sample_strategy: "dreamfusion3dgs"
+  height: 512
+  width: 512
+  use_original_resolution: False
+
+  elevation_view_num: 2
+  azimuth_view_num: 8
+
+system_type: "vip3de-system"
+system:
+  gs_source: replaced_by_ply_path
+  per_editing_step: 100000
+  edit_begin_step: 0
+  densify_until_iter: 200000
+  densify_from_iter: 0
+  densification_interval: 100
+  max_densify_percent: 0.01
+  max_grad: 5
+  min_opacity: 0.005
+  prompt_processor_type: "stable-diffusion-prompt-processor"
+  prompt_processor:
+    pretrained_model_name_or_path: "runwayml/stable-diffusion-v1-5"
+    prompt: 'Instruction'
+  camera_update_per_step: 1000
+  added_noise_schedule:  [400]
+#  seg_prompt: 'face'
+  source_prompt: "replaced by source prompt"
+  target_prompt: "replaced by target prompt"
+
+  gs_lr_scaler: 1
+  gs_final_lr_scaler: 1
+  color_lr_scaler: 1
+  opacity_lr_scaler: 1
+  scaling_lr_scaler: 1
+  rotation_lr_scaler: 1
+
+  mask_thres: 0.8
+
+  guidance_type: "vip3de-guidance"
+  guidance:
+    min_step_percent: 0.02
+    max_step_percent: 0.98
+    guidance_scale: 7.5
+    condition_scale: 1.5
+    camera_batch_size: 5
+    svd_config: 'configs/svd_xt.yaml'
+    num_frames: 25 # 20
+    num_steps: 25
+    inverse_alpha: 0.1
+    sampling_gap: 1
+    svd_height: 576
+    svd_width: 1024
+    svd_min_scale: 1.5
+    svd_max_scale: 3.0
+  
+  loggers:
+    wandb:
+      enable: false
+      project: 'threestudio_dge'
+      name: None
+
+  loss:
+    lambda_l1: 10.
+    lambda_p: 10.
+    use_sds: false
+    lambda_sds: 0
+
+  optimizer:
+    name: Adam
+    args:
+      lr: 0.001
+      betas: [0.9, 0.99]
+      eps: 1.e-15
+
+trainer:
+  max_steps: 1000
+  log_every_n_steps: 1
+  num_sanity_val_steps: 0
+  val_check_interval: 1000
+  enable_progress_bar: true
+  precision: 16-mixed
+
+checkpoint:
+  save_last: true # save at each validation time
+  save_top_k: -1
+  every_n_train_steps: ${trainer.max_steps}
+
+# white_background: true

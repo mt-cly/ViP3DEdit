@@ -1,0 +1,20 @@
+export CUDA_VISIBLE_DEVICES=0,1
+python launch.py --config configs/vip3de.yaml --train  \
+    trainer.max_steps=600 \
+    trainer.val_check_interval=600 \
+    system.prompt_processor.prompt="Turn his face into a spider man with Mask." \
+    data.source="./data/face/" \
+    data.max_view_num=48 \
+    data.height=512 \
+    data.width=768 \
+    system.seed=7000 \
+    system.guidance.svd_height=512 \
+    system.guidance.svd_width=768 \
+    system.guidance.svd_min_scale=2.5 \
+    system.guidance.svd_max_scale=4.5 \
+    system.guidance.guidance_scale=7.5 \
+    system.gs_source="./data/face/gaussians/point_cloud/iteration_30000/point_cloud.ply" \
+    system.source_prompt="A man." \
+    system.target_prompt="A spider man with mask." \
+    system.guidance.inverse_alpha=0.15 \
+    system.seg_prompt='face'

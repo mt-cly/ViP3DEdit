@@ -1,0 +1,21 @@
+export CUDA_VISIBLE_DEVICES=0,1
+python launch.py --config configs/vip3de.yaml --train  \
+    trainer.max_steps=800 \
+    trainer.val_check_interval=800 \
+    system.seed=9000 \
+    system.prompt_processor.prompt="Turn him into a robot." \
+    data.source="./data/person/" \
+    data.max_view_num=63 \
+    data.height=512 \
+    data.width=384 \
+    system.guidance.guidance_scale=3.5 \
+    system.guidance.condition_scale=1.5 \
+    system.guidance.svd_height=512 \
+    system.guidance.svd_width=384 \
+    system.guidance.svd_min_scale=2.5 \
+    system.guidance.svd_max_scale=5.0 \
+    system.gs_source="./data/person/gaussians/point_cloud/iteration_30000/point_cloud.ply" \
+    system.source_prompt="A man." \
+    system.target_prompt="A robot." \
+    system.guidance.inverse_alpha=0.15 \
+    # system.seg_prompt="person" 
