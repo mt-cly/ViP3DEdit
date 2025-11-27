@@ -98,7 +98,7 @@ bash demo/face_Turn_him_into_a_spider_man_with_mask.sh
 # Turn a person into a robot
 bash demo/person_Turn_him_into_a_robot.sh
 
-# Make T-Rex on fire
+# Make Trex on fire
 bash demo/trex_Make_it_on_fire.sh
 ```
 
