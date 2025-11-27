@@ -1,5 +1,5 @@
 <div align="center">
-<h1>ViP3DE: Fast Multi-view Consistent 3D Editing with Video Priors</h1>
+<h2>ViP3DE: Fast Multi-view Consistent 3D Editing with Video Priors</h2>
 
 <h3 align="center"><b>AAAI 2026</b></h3>
 
