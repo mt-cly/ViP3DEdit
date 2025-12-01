@@ -3,7 +3,7 @@
 
 <h3 align="center"><b>AAAI 2026</b></h3>
 
-[**Chen Liyi**](https://scholar.google.com/citations?user=nMev-10AAAAJ&hl=zh-CN) · [**Li Ruihuang**](https://scholar.google.com/citations?user=8CfyOtQAAAAJ&hl=zh-CN) · [**Zhang Guowen**](https://scholar.google.com/citations?user=DxcLKZIAAAAJ&hl=en) · [**Wang Pengfei**](https://scholar.google.com/citations?user=zAAYwRYAAAAJ&hl=en) · [**Lei Zhang**](https://www4.comp.polyu.edu.hk/~cslzhang/)<sup>&dagger;</sup>
+[**Chen Liyi**](https://scholar.google.com/citations?user=nMev-10AAAAJ&hl=zh-CN) · [**Li Ruihuang**](https://scholar.google.com/citations?user=8CfyOtQAAAAJ&hl=zh-CN) · [**Zhang Guowen**](https://scholar.google.com/citations?user=DxcLKZIAAAAJ&hl=en) · [**Wang Pengfei**](https://scholar.google.com/citations?user=zAAYwRYAAAAJ&hl=en) · [**Zhang Lei**](https://www4.comp.polyu.edu.hk/~cslzhang/)<sup>&dagger;</sup>
 <br>
 
 The Hong Kong Polytechnic University 
