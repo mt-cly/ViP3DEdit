@@ -132,11 +132,11 @@ Results will be saved to `outputs/vip3de/<scene_name>-<prompt>/`:
 If you find this work useful, please cite our paper:
 
 ```bibtex
-@inproceedings{chen2026vip3de,
+@article{park2025vision,
   title={Fast Multi-view Consistent 3D Editing with Video Priors},
   author={Chen, Liyi and Li, Ruihuang and Zhang, Guowen and Wang, Pengfei and Zhang, Lei},
-  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
-  year={2026}
+  journal={arXiv preprint arXiv:2511.23172},
+  year={2025}
 }
 ```
 
