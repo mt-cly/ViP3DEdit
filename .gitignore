@@ -1,6 +1,6 @@
 # Project specific
 
-gaussiansplatting
+# gaussiansplatting
 checkpoints
 
 *.pth
@@ -118,8 +118,8 @@ coverage.xml
 *.zip
 
 # Dataset files
-data/
-datasets/
+/data/
+/datasets/
 *.jpg
 *.jpeg
 *.png
