@@ -15,6 +15,7 @@ checkpoints
 *.pickle
 *.safetensors
 
+
 # Python
 __pycache__/
 *.py[cod]
@@ -120,6 +121,7 @@ coverage.xml
 # Dataset files
 /data/
 /datasets/
+/temp/
 *.jpg
 *.jpeg
 *.png

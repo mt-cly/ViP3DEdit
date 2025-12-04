@@ -1,6 +1,6 @@
 # Project specific
 video_todo
-data*
+/data/
 !threestudio/data/
 edit_cache*
 output*
