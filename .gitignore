@@ -15,7 +15,6 @@ checkpoints
 *.pickle
 *.safetensors
 
-
 # Python
 __pycache__/
 *.py[cod]
@@ -114,6 +113,7 @@ coverage.xml
 *.hdf5
 *.npy
 *.npz
+!scripts/util/detection/*.npz
 *.pkl
 *.pickle
 *.zip
